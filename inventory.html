@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>在庫器材查詢｜曜動科技</title>
+    <meta name="description" content="曜動科技工作室：視訊、音響、燈光與週邊器材庫存狀態查詢（示意資料）。" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div class="bg-grid" aria-hidden="true"></div>
+    <header class="site-header">
+      <div class="wrap inner">
+        <a class="logo" href="index.html" aria-label="曜動科技首頁">
+          <img class="logo-img" src="logo.svg" alt="曜動科技" />
+        </a>
+        <nav class="nav" aria-label="主要導覽">
+          <a href="index.html">首頁</a>
+          <a href="about.html">關於曜動</a>
+          <a href="inventory.html" aria-current="page">在庫器材</a>
+          <a href="contact.html">聯絡我們</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="wrap">
+      <header class="page-head">
+        <p class="tagline">Inventory</p>
+        <h1>在庫器材查詢</h1>
+      </header>
+
+      <section class="section" style="border-top: none; padding-top: 0">
+        <div class="toolbar">
+          <label class="search" for="inv-search">
+            <span class="visually-hidden">搜尋</span>
+            <input
+              id="inv-search"
+              type="search"
+              placeholder="搜尋名稱、分類、備註、編號…"
+              autocomplete="off"
+            />
+          </label>
+          <span class="muted" id="inv-meta">
+            顯示 <strong id="inv-count">0</strong> 筆 ·
+            <span id="inv-updated"></span>
+          </span>
+        </div>
+        <div class="chips" id="inv-chips" aria-label="分類篩選"></div>
+        <div class="inventory-grid" id="inv-grid" style="margin-top: 1rem">
+        </div>
+        <p class="muted" style="font-size: 1rem; margin-top: 1.25rem; text-align: center">持續增加中</p>
+      </section>
+    </main>
+
+    <footer class="site-footer wrap">
+      <div class="footer-card">
+        <div class="footer-logo-wrap">
+          <img class="footer-logo" src="logo.svg" alt="曜動科技 Logo" />
+        </div>
+        <div class="footer-info">
+          <p class="footer-line">
+            <span class="footer-item">曜動科技工作室 / 統編 60885747</span>
+          </p>
+          <p class="footer-line">
+            <span class="footer-item"><a
+                href="mailto:lyuchan@ydlab.cc">電子郵件：lyuchan@ydlab.cc</a></span>
+          </p>
+          <p class="footer-line">
+            <span class="footer-item"><a
+                href="tel:+886911663337">聯絡電話：0911-663-337</a></span>
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/inventory.js" defer></script>
+  </body>
+</html>

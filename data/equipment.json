@@ -1,0 +1,41 @@
+{
+  "updated": "2026-04-14",
+  "items": [
+    {
+      "name": "Behringer WING Compact",
+      "category": "音響",
+      "summary": "音響數位混音器，內有64X64 Dante卡片",
+      "image": "assets/wing.jpg"
+    },{
+      "name": "Symetrix Radius AEC",
+      "category": "音響",
+      "summary": "音響處理器，內有64X64 Dante卡片，具有12進8出analog I/O",
+      "image": "assets/radiusaec.jpg"
+    },{
+      "name": "水星SE106PPro",
+      "category": "網路",
+      "summary": "網路交換器，具有10/100/1000/2500Mbps自適應，4個POE與1個一般RJ45連接埠，1個10Gbps SFP連接埠",
+      "image": "assets/se106ppro.jpg"
+    },{
+      "name": "水星SE106Pro",
+      "category": "網路",
+      "summary": "網路交換器，具有10/100/1000/2500Mbps自適應，4個一般RJ45連接埠，2個10Gbps SFP連接埠",
+      "image": "assets/se106pro.jpg"
+    },{
+      "name": "光纖線軸6P/150M",
+      "category": "網路",
+      "summary": "光纖線軸，6P/150M，用於網路或視訊連接",
+      "image": "assets/fiber.webp"
+    },{
+      "name": "HDMI光端機",
+      "category": "視訊",
+      "summary": "HDMI光端機，用於HDMI訊號的遠端傳輸",
+      "image": "assets/hdmi光端機.png"
+    },{
+      "name": "各類線材",
+      "category": "其他",
+      "summary": "CAT6網路線、HDMI線、XLR線、電源線等",
+      "image": "assets/null.png"
+    }
+  ]
+}
