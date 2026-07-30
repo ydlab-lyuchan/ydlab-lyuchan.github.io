@@ -94,7 +94,7 @@
       card.className = "product-card";
       card.innerHTML = `
         <div class="product-image-wrap">
-          <img class="product-image" src="${escapeHtml(i.image || "assets/equipment/network.svg")}" alt="${escapeHtml(i.name)}" loading="lazy" />
+          <img class="product-image" src="${assetUrl(i.image || "assets/null.png")}" alt="${escapeHtml(i.name)}" loading="lazy" />
         </div>
         <div class="product-body">
           <p class="product-category">${escapeHtml(i.category)}</p>
@@ -112,6 +112,14 @@
       .replace(/</g, "&lt;")
       .replace(/>/g, "&gt;")
       .replace(/\"/g, "&quot;");
+  }
+
+  function assetUrl(path) {
+    if (!path) return "";
+    return String(path)
+      .split("/")
+      .map((seg) => encodeURIComponent(seg))
+      .join("/");
   }
 
   async function load() {

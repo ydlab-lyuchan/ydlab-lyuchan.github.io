@@ -26,6 +26,14 @@
       .replace(/"/g, "&quot;");
   }
 
+  function assetUrl(path) {
+    if (!path) return "";
+    return String(path)
+      .split("/")
+      .map((seg) => encodeURIComponent(seg))
+      .join("/");
+  }
+
   function formatDate(date) {
     if (!date) return "";
     const d = String(date);
@@ -100,7 +108,7 @@
       return `
         <div class="case-cover">
           <button type="button" class="case-zoom-btn" data-lightbox-index="0" aria-label="放大圖片">
-            <img src="${escapeHtml(images[0])}" alt="${escapeHtml(item.title)}" loading="lazy" />
+            <img src="${assetUrl(images[0])}" alt="${escapeHtml(item.title)}" loading="lazy" />
           </button>
         </div>`;
     }
@@ -111,7 +119,7 @@
             (src, idx) => `
           <figure class="case-gallery-item">
             <button type="button" class="case-zoom-btn" data-lightbox-index="${idx}" aria-label="放大圖片 ${idx + 1}">
-              <img src="${escapeHtml(src)}" alt="${escapeHtml(item.title)} - ${idx + 1}" loading="lazy" />
+              <img src="${assetUrl(src)}" alt="${escapeHtml(item.title)} - ${idx + 1}" loading="lazy" />
             </button>
           </figure>`,
           )
@@ -173,7 +181,7 @@
     if (!lightbox.srcs.length) return;
     const n = lightbox.srcs.length;
     lightbox.index = ((index % n) + n) % n;
-    lightbox.img.src = lightbox.srcs[lightbox.index];
+    lightbox.img.src = assetUrl(lightbox.srcs[lightbox.index]);
     lightbox.counter.textContent =
       n > 1 ? `${lightbox.index + 1} / ${n}` : "";
     const showNav = n > 1;
@@ -229,7 +237,7 @@
     card.href = detailHref(item);
     card.innerHTML = `
       <div class="case-teaser-image">
-        <img src="${escapeHtml(item.image || "assets/null.png")}" alt="${escapeHtml(item.title)}" loading="lazy" />
+        <img src="${assetUrl(item.image || "assets/null.png")}" alt="${escapeHtml(item.title)}" loading="lazy" />
       </div>
       <div class="case-teaser-body">
         <p class="case-meta">
