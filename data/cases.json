@@ -1,0 +1,73 @@
+{
+  "updated": "2026-07-30",
+  "homeLimit": 3,
+  "items": [
+    {
+      "id": "2026-05-13-明志科大韓研社成發",
+      "title": "明志科大韓研社成發",
+      "date": "2026-05-13",
+      "category": "燈光、音響、視訊",
+      "summary": "拼接投影機背板、燈光系統與音響系統",
+      "description": "",
+      "image": "assets/cases/IMG_1831-1785397202580.png",
+      "images": [
+        "assets/cases/IMG_1831-1785397207164.png",
+        "assets/cases/camphoto_959030623-1785397210728.JPG"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=6dPtRRnC3iI&list=PLCM3kGBdtevAXytobDkcwifHsohnGxkK5"
+    },
+    {
+      "id": "2026-05-14-明志科大熱舞社成發",
+      "title": "明志科大熱舞社成發",
+      "date": "2026-05-14",
+      "category": "燈光、音響、視訊",
+      "summary": "拼接投影機背板、燈光系統與音響系統",
+      "description": "",
+      "image": "assets/cases/IMG_1831.png",
+      "images": [
+        "assets/cases/IMG_1831-1785396613911.png",
+        "assets/cases/camphoto_959030623.JPG"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=bx43S12Gq_8&list=PLymF_Oh6rjEY99sGJCK7wDC5fKWsY3_GI"
+    },
+    {
+      "id": "明志科大學生會-壯壯脫口秀",
+      "title": "明志科大學生會-壯壯脫口秀",
+      "date": "2026-01-12",
+      "category": "音響、視訊",
+      "summary": "雙廳聯播視訊系統＆音響系統架設",
+      "description": "",
+      "image": "assets/cases/IMG_1089.png",
+      "images": [
+        "assets/cases/IMG_1089-1785396459268.png",
+        "assets/cases/IMG_1088.png"
+      ],
+      "youtube": ""
+    },
+    {
+      "id": "明志科大學生會26th三明祭",
+      "title": "明志科大學生會26th三明祭",
+      "date": "2024-11-20",
+      "category": "音響",
+      "summary": "",
+      "description": "",
+      "image": "assets/cases/圖片 1.png",
+      "images": [],
+      "youtube": "https://youtu.be/K6ed0AR0Ix0"
+    },
+    {
+      "id": "明志科大學生會25th三明祭",
+      "title": "明志科大學生會25th三明祭",
+      "date": "2023-11-13",
+      "category": "音響",
+      "summary": "",
+      "description": "",
+      "image": "assets/cases/IMG_4466.JPG",
+      "images": [
+        "assets/cases/IMG_4465 2.JPG",
+        "assets/cases/IMG_4466-1785396426051.JPG"
+      ],
+      "youtube": ""
+    }
+  ]
+}

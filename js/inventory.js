@@ -19,8 +19,18 @@
     return "badge-limited";
   }
 
+  function splitCategories(raw) {
+    return String(raw || "")
+      .split("、")
+      .map((c) => c.trim())
+      .filter(Boolean);
+  }
+
   function categoriesFrom(items) {
-    const set = new Set(items.map((i) => i.category));
+    const set = new Set();
+    for (const i of items) {
+      for (const c of splitCategories(i.category)) set.add(c);
+    }
     return ["all", ...Array.from(set).sort()];
   }
 
@@ -47,7 +57,9 @@
   function filterItems() {
     const q = state.q.trim().toLowerCase();
     return state.items.filter((i) => {
-      const catOk = state.category === "all" || i.category === state.category;
+      const catOk =
+        state.category === "all" ||
+        splitCategories(i.category).includes(state.category);
       if (!catOk) return false;
       if (!q) return true;
       const blob = [

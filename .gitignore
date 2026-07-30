@@ -1,0 +1,7 @@
+# Electron 編輯器（本機工具）
+editer/node_modules/
+editer/dist/
+editer/out/
+
+# macOS
+.DS_Store
