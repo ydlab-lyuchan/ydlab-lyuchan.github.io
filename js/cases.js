@@ -28,6 +28,7 @@
 
   function assetUrl(path) {
     if (!path) return "";
+    if (/^https:\/\//i.test(String(path))) return new URL(path).href.replace(/"/g, "%22");
     return String(path)
       .split("/")
       .map((seg) => encodeURIComponent(seg))
@@ -357,9 +358,7 @@
   }
 
   async function load() {
-    const res = await fetch("data/cases.json", { cache: "no-store" });
-    if (!res.ok) throw new Error("無法載入案例資料");
-    const data = await res.json();
+    const data = window.YdlabPublic ? await window.YdlabPublic.load("cases.json", "data/cases.json") : await (await fetch("data/cases.json", { cache: "no-store" })).json();
     state.items = sortByDateDesc(data.items || []);
     state.homeLimit = Number(data.homeLimit) > 0 ? Number(data.homeLimit) : HOME_DEFAULT_LIMIT;
 

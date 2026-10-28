@@ -116,6 +116,7 @@
 
   function assetUrl(path) {
     if (!path) return "";
+    if (/^https:\/\//i.test(String(path))) return new URL(path).href.replace(/"/g, "%22");
     return String(path)
       .split("/")
       .map((seg) => encodeURIComponent(seg))
@@ -123,9 +124,7 @@
   }
 
   async function load() {
-    const res = await fetch("data/equipment.json", { cache: "no-store" });
-    if (!res.ok) throw new Error("無法載入器材資料");
-    const data = await res.json();
+    const data = window.YdlabPublic ? await window.YdlabPublic.load("equipment.json", "data/equipment.json") : await (await fetch("data/equipment.json", { cache: "no-store" })).json();
     state.items = data.items || [];
     if (els.updated && data.updated) {
       els.updated.textContent = `資料更新：${data.updated}`;

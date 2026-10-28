@@ -15,7 +15,7 @@
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
   </head>
-  <body>
+  <body data-site-page="contact">
     <div class="bg-grid" aria-hidden="true"></div>
     <header class="site-header">
       <div class="wrap inner">
@@ -55,11 +55,11 @@
             <div class="contact-info-col">
               <dl class="contact-item">
                 <dt>電話</dt>
-                <dd><a href="tel:+886911663337">0911-663-337</a></dd>
+                <dd><a data-site-phone href="tel:+886911663337">0911-663-337</a></dd>
               </dl>
               <dl class="contact-item">
                 <dt>電子郵件</dt>
-                <dd><a href="mailto:lyuchan@ydlab.cc">lyuchan@ydlab.cc</a></dd>
+                <dd><a data-site-email href="mailto:lyuchan@ydlab.cc">lyuchan@ydlab.cc</a></dd>
               </dl>
             </div>
           </section>
@@ -78,15 +78,16 @@
           </p>
           <p class="footer-line">
             <span class="footer-item"><a
-                href="mailto:lyuchan@ydlab.cc">電子郵件：lyuchan@ydlab.cc</a></span>
+                data-site-email href="mailto:lyuchan@ydlab.cc">電子郵件：lyuchan@ydlab.cc</a></span>
           </p>
           <p class="footer-line">
             <span class="footer-item"><a
-                href="tel:+886911663337">聯絡電話：0911-663-337</a></span>
+                data-site-phone href="tel:+886911663337">聯絡電話：0911-663-337</a></span>
           </p>
         </div>
       </div>
     </footer>
 
-  </body>
+    <script src="js/panel-content.js?v=20261029" defer></script>
+</body>
 </html>
